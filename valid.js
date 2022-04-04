@@ -5,6 +5,7 @@ const inputSection = document.getElementById("input_section");
 
 
 inputSection.addEventListener('submit', (e) => {
+  e.preventDefault();
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(email.value === "" || email.value == "null")
     {
@@ -27,5 +28,5 @@ var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       errorMessage.classList.remove("active");
       return true;
  }
-  e.preventDefault();
+ 
     })
